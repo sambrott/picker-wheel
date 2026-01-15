@@ -2,27 +2,27 @@
 
 /* ========================================
    THEME 1: DARK (Default - Free)
-   Monochrome black primary, white accents
+   Monochrome black primary, soft white accents
    ======================================== */
 [data-theme="dark"] {
-  --color-primary-1: #000000;
+  --color-primary-1: #0D0D0D;
   --color-primary-2: #1A1A1A;
   --color-primary-3: #2D2D2D;
-  --color-accent: #FFFFFF;
-  --color-accent-muted: rgba(255, 255, 255, 0.7);
-  --color-background: #000000;
+  --color-accent: #E8E8E8;
+  --color-accent-muted: rgba(232, 232, 232, 0.7);
+  --color-background: #0D0D0D;
   --color-surface: #1A1A1A;
   --color-surface-dark: #0A0A0A;
-  --color-text: #FFFFFF;
-  --color-text-dark: #000000;
-  --color-text-muted: rgba(255, 255, 255, 0.6);
-  --color-highlight: #FFFFFF;
+  --color-text: #E8E8E8;
+  --color-text-dark: #0D0D0D;
+  --color-text-muted: rgba(232, 232, 232, 0.6);
+  --color-highlight: #E8E8E8;
   --color-danger: #FF4444;
   
   /* Grayscale wheel segment colors (default) */
-  --wheel-seg-1: #FFFFFF;
-  --wheel-seg-2: #E0E0E0;
-  --wheel-seg-3: #C0C0C0;
+  --wheel-seg-1: #E8E8E8;
+  --wheel-seg-2: #D0D0D0;
+  --wheel-seg-3: #B8B8B8;
   --wheel-seg-4: #A0A0A0;
   --wheel-seg-5: #808080;
   --wheel-seg-6: #606060;
@@ -46,21 +46,21 @@
 
 /* ========================================
    THEME 2: LIGHT (Free)
-   Monochrome white primary, black accents
+   Soft off-white primary, dark gray accents
    ======================================== */
 [data-theme="light"] {
-  --color-primary-1: #FFFFFF;
-  --color-primary-2: #F5F5F5;
-  --color-primary-3: #E8E8E8;
-  --color-accent: #000000;
-  --color-accent-muted: rgba(0, 0, 0, 0.7);
-  --color-background: #FFFFFF;
-  --color-surface: #F5F5F5;
-  --color-surface-dark: #EBEBEB;
-  --color-text: #000000;
-  --color-text-dark: #FFFFFF;
-  --color-text-muted: rgba(0, 0, 0, 0.6);
-  --color-highlight: #000000;
+  --color-primary-1: #F5F5F3;
+  --color-primary-2: #EAEAE8;
+  --color-primary-3: #DDDDD8;
+  --color-accent: #1A1A1A;
+  --color-accent-muted: rgba(26, 26, 26, 0.7);
+  --color-background: #F5F5F3;
+  --color-surface: #EAEAE8;
+  --color-surface-dark: #DDDDD8;
+  --color-text: #1A1A1A;
+  --color-text-dark: #F5F5F3;
+  --color-text-muted: rgba(26, 26, 26, 0.6);
+  --color-highlight: #1A1A1A;
   --color-danger: #D32F2F;
   
   /* Grayscale wheel segment colors (default) */
