@@ -50,8 +50,29 @@ export default function WheelCanvas({ onSpinComplete }: WheelCanvasProps) {
   
   const visibleEntries = entries.filter(e => !e.hidden)
   
-  // Display size changes based on fullscreen - use fixed sizes
-  const displaySize = isFullscreen ? 500 : 340
+  // Track window width for responsive sizing
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1000)
+  
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+  
+  // Display size changes based on fullscreen and screen width
+  const getDisplaySize = () => {
+    if (isFullscreen) {
+      if (windowWidth <= 480) return 300
+      if (windowWidth <= 768) return 400
+      return 500
+    }
+    // Normal mode
+    if (windowWidth <= 480) return 280
+    if (windowWidth <= 768) return 320
+    return 340
+  }
+  
+  const displaySize = getDisplaySize()
   const dpr = typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, 3) : 2
   const canvasSize = displaySize * dpr
   
@@ -219,7 +240,7 @@ export default function WheelCanvas({ onSpinComplete }: WheelCanvasProps) {
     ctx.fillStyle = surfaceColor
     ctx.fill()
     
-  }, [visibleEntries, theme, canvasSize, displaySize, dpr, isFullscreen, fontLoaded])
+  }, [visibleEntries, theme, canvasSize, displaySize, dpr, isFullscreen, fontLoaded, windowWidth])
   
   // Track rotation changes to detect peg crossings and play tick sound
   useEffect(() => {

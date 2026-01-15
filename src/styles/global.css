@@ -315,8 +315,11 @@ input:focus, textarea:focus {
   opacity: 1;
 }
 
-/* Responsive - Stack columns on smaller screens */
-@media (max-width: 900px) {
+/* ========================================
+   RESPONSIVE - Stack to single column
+   Trigger immediately when side-by-side doesn't fit
+   ======================================== */
+@media (max-width: 850px) {
   .two-column-layout {
     flex-direction: column;
     align-items: center;
@@ -329,6 +332,16 @@ input:focus, textarea:focus {
     max-width: 400px;
     position: relative;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .wheel-sticky {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .right-column {
@@ -342,22 +355,46 @@ input:focus, textarea:focus {
   .wheel-ad {
     display: none;
   }
+  
+  .ad-row.ad-top {
+    display: none;
+  }
 }
 
+/* ========================================
+   RESPONSIVE - MOBILE
+   ======================================== */
 @media (max-width: 480px) {
   .two-column-layout {
     padding: var(--spacing-md);
+    gap: var(--spacing-lg);
   }
   
   .left-column,
   .right-column {
     max-width: 100%;
+    width: 100%;
+  }
+  
+  .panels-container {
+    gap: var(--spacing-sm);
   }
   
   h1 { font-size: 1.5rem; }
   h2 { font-size: 1.125rem; }
   
   .ad-row {
+    padding: var(--spacing-md);
+  }
+  
+  /* Smaller padding on panels for mobile */
+  .panel-box,
+  .input-panel,
+  .preset-wheels,
+  .theme-picker-box,
+  .pointer-picker-box,
+  .tool-settings,
+  .accumulation-results-box {
     padding: var(--spacing-md);
   }
 }
