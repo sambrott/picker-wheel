@@ -75,17 +75,17 @@ export default function InputPanel() {
                 </button>
               </div>
             )}
+            
+            {entries.length > 0 && (
+              <div className="input-panel-actions">
+                <button onClick={clearEntries} className="btn btn-secondary btn-danger">
+                  Clear All
+                </button>
+              </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
-      
-      <div className="input-panel-actions">
-        {entries.length > 0 && (
-          <button onClick={clearEntries} className="btn btn-secondary btn-danger">
-            Clear All
-          </button>
-        )}
-      </div>
       
       <span className="corner-dot bottom-left"></span>
       <span className="corner-dot bottom-right"></span>
