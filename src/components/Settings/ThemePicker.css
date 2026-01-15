@@ -1,0 +1,203 @@
+/* Theme Picker Box - Standalone panel style */
+.theme-picker-box {
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 3px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  margin-top: var(--spacing-md);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Corner dots - accent color with inner shadow */
+.theme-picker-box .corner-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: var(--shadow-inset);
+}
+
+.theme-picker-box .corner-dot.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.theme-picker-box .corner-dot.top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.theme-picker-box .corner-dot.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.theme-picker-box .corner-dot.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Collapsible header */
+.theme-picker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.theme-picker-header:hover {
+  opacity: 0.8;
+}
+
+.expand-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+  opacity: 0.7;
+}
+
+.expand-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+/* Theme sections container */
+.theme-sections {
+  margin-top: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Individual section */
+.theme-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pro-star {
+  width: 10px;
+  height: 10px;
+  color: var(--color-accent);
+}
+
+/* Theme Swatches */
+.theme-swatches {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.theme-swatch {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  padding: 0;
+  background: none;
+}
+
+.theme-swatch:hover {
+  transform: scale(1.1);
+  border-color: var(--color-accent);
+}
+
+.theme-swatch.active {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent);
+}
+
+.swatch-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swatch-surface {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+}
+
+.swatch-accent {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Glow indicator for cyberpunk theme */
+.glow-indicator {
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00ffff;
+  box-shadow: 0 0 6px #00ffff, 0 0 10px #00ffff;
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 6px #00ffff, 0 0 10px #00ffff;
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 3px #00ffff, 0 0 6px #00ffff;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-swatches {
+    justify-content: center;
+  }
+}

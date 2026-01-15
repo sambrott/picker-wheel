@@ -1,0 +1,148 @@
+.wheel-outer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.wheel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  height: 340px;
+}
+
+.wheel-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 340px;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.35));
+}
+
+.wheel-canvas {
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--color-accent);
+  box-sizing: border-box;
+}
+
+.fullscreen-toggle {
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border: 3px solid var(--color-accent);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.fullscreen-toggle:hover {
+  background: var(--color-surface-dark);
+  transform: translateY(-1px);
+}
+
+/* Fullscreen mode */
+.wheel-outer-container.fullscreen {
+  position: fixed;
+  top: 53px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-background);
+  z-index: 50;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-xl);
+}
+
+/* In fullscreen, the canvas draws at 500px, so match container */
+.wheel-outer-container.fullscreen .wheel-container {
+  width: 500px;
+  height: 500px;
+}
+
+.wheel-outer-container.fullscreen .wheel-wrapper {
+  width: 500px;
+  height: 500px;
+}
+
+.wheel-outer-container.fullscreen .spin-button {
+  width: 90px;
+  height: 90px;
+  font-size: 1rem;
+}
+
+.wheel-outer-container.fullscreen .wheel-pointer svg {
+  width: 60px;
+  height: 72px;
+}
+
+/* Glow effect on hover */
+.wheel-container:hover .wheel-wrapper {
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.45));
+}
+
+@media (max-width: 768px) {
+  .wheel-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .wheel-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* Fullscreen on tablet */
+  .wheel-outer-container.fullscreen .wheel-container {
+    width: 400px;
+    height: 400px;
+  }
+
+  .wheel-outer-container.fullscreen .wheel-wrapper {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wheel-container {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .wheel-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+  
+  /* Fullscreen on mobile */
+  .wheel-outer-container.fullscreen .wheel-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .wheel-outer-container.fullscreen .wheel-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .wheel-outer-container.fullscreen .spin-button {
+    width: 70px;
+    height: 70px;
+    font-size: 0.9rem;
+  }
+  
+  .wheel-outer-container.fullscreen .wheel-pointer svg {
+    width: 45px;
+    height: 54px;
+  }
+}

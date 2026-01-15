@@ -1,0 +1,27 @@
+.wheel-pointer {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  transform-origin: center bottom;
+}
+
+.wheel-pointer svg {
+  width: 40px;
+  height: 50px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Tick animation when pointer hits a peg */
+@keyframes pointer-tick {
+  0% { transform: translateX(-50%) rotate(0deg); }
+  25% { transform: translateX(-50%) rotate(8deg); }
+  50% { transform: translateX(-50%) rotate(0deg); }
+  75% { transform: translateX(-50%) rotate(-4deg); }
+  100% { transform: translateX(-50%) rotate(0deg); }
+}
+
+.wheel-pointer.ticking {
+  animation: pointer-tick 0.08s ease-out;
+}
