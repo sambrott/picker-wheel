@@ -1,8 +1,5 @@
 .input-panel {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  width: 100%;
+  overflow: hidden;
   background: var(--color-surface);
   border: 3px solid var(--color-accent);
   border-radius: var(--radius-lg);
@@ -86,6 +83,7 @@
 .add-entry-form {
   display: flex;
   gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
 }
 
 .entry-input {
@@ -95,12 +93,14 @@
 
 .input-list-wrapper {
   overflow: hidden;
+  margin-top: var(--spacing-md);
 }
 
 .input-panel-actions {
   display: flex;
   gap: var(--spacing-sm);
   flex-wrap: wrap;
+  margin-top: var(--spacing-md);
 }
 
 .btn-danger {
