@@ -1,0 +1,185 @@
+/* Pointer Picker Box */
+.pointer-picker-box {
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 3px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Corner dots */
+.pointer-picker-box .corner-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: var(--shadow-inset);
+}
+
+.pointer-picker-box .corner-dot.top-left { top: 10px; left: 10px; }
+.pointer-picker-box .corner-dot.top-right { top: 10px; right: 10px; }
+.pointer-picker-box .corner-dot.bottom-left { bottom: 10px; left: 10px; }
+.pointer-picker-box .corner-dot.bottom-right { bottom: 10px; right: 10px; }
+
+/* Header */
+.pointer-picker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.pointer-picker-header:hover {
+  opacity: 0.8;
+}
+
+.pointer-picker-header .header-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.pointer-picker-header .toggle-arrow {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* Sections container */
+.pointer-sections {
+  margin-top: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  overflow: hidden;
+}
+
+/* Individual section */
+.pointer-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pro-star {
+  width: 12px;
+  height: 12px;
+  color: var(--color-accent);
+}
+
+/* Pointer Grid */
+.pointer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+}
+
+/* Individual pointer option */
+.pointer-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm);
+  background: rgba(0, 0, 0, 0.15);
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.pointer-option:hover {
+  background: rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.pointer-option.active {
+  border-color: var(--color-accent);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px var(--color-accent);
+}
+
+/* Premium options */
+.pointer-option.premium {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.pointer-option.premium:hover {
+  transform: none;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.pointer-option.premium .lock-icon {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 14px;
+  height: 14px;
+  color: var(--color-text-muted);
+}
+
+/* Pointer preview container */
+.pointer-preview {
+  width: 36px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pointer-preview-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+/* Neon glow effect for neon pointer */
+.pointer-preview-svg.neon-glow {
+  filter: drop-shadow(0 0 4px #00FFFF) drop-shadow(0 0 8px #00FFFF);
+}
+
+/* Pointer name */
+.pointer-name {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .pointer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .pointer-preview {
+    width: 32px;
+    height: 42px;
+  }
+}
+

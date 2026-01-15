@@ -4,6 +4,7 @@ import InputPanel from './components/Inputs/InputPanel'
 import ToolSettings from './components/Settings/ToolSettings'
 import PresetWheels from './components/Presets/PresetWheels'
 import ThemePicker from './components/Settings/ThemePicker'
+import PointerPicker from './components/Settings/PointerPicker'
 import AccumulationResults from './components/Results/AccumulationResults'
 import ResultModal from './components/Results/ResultModal'
 import Header from './components/Layout/Header'
@@ -70,6 +71,7 @@ function App() {
             <InputPanel />
             <PresetWheels />
             <ThemePicker />
+            <PointerPicker />
             <ToolSettings />
             <AccumulationResults />
             

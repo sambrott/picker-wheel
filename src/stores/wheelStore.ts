@@ -3,6 +3,7 @@ import { persist } from 'zustand/middleware'
 
 export type SpinMode = 'normal' | 'elimination' | 'accumulation'
 export type ThemeId = 'dark' | 'light' | 'cyberpunk' | 'retro' | 'ocean' | 'sunset' | 'forest'
+export type PointerId = 'classic' | 'arrow' | 'pin' | 'crystal' | 'neon' | 'golden' | 'blade' | 'gem'
 
 export interface WheelEntry {
   id: string
@@ -35,6 +36,10 @@ interface WheelState {
   // Theme
   theme: ThemeId
   setTheme: (theme: ThemeId) => void
+  
+  // Pointer style
+  pointerId: PointerId
+  setPointerId: (id: PointerId) => void
   
   // Settings
   spinDuration: number
@@ -103,6 +108,10 @@ export const useWheelStore = create<WheelState>()(
       theme: 'dark',
       setTheme: (theme) => set({ theme }),
       
+      // Pointer style
+      pointerId: 'classic',
+      setPointerId: (id) => set({ pointerId: id }),
+      
       // Settings
       spinDuration: 5,
       setSpinDuration: (duration) => set({ spinDuration: duration }),
@@ -152,6 +161,7 @@ export const useWheelStore = create<WheelState>()(
         confettiEnabled: state.confettiEnabled,
         history: state.history,
         theme: state.theme,
+        pointerId: state.pointerId,
       })
     }
   )
