@@ -3,7 +3,13 @@ import { persist } from 'zustand/middleware'
 
 export type SpinMode = 'normal' | 'elimination' | 'accumulation'
 export type ThemeId = 'dark' | 'light' | 'cyberpunk' | 'retro' | 'ocean' | 'sunset' | 'forest'
-export type PointerId = 'classic' | 'arrow' | 'pin' | 'crystal' | 'neon' | 'golden' | 'blade' | 'gem'
+export type PointerId = 
+  // Free basic
+  | 'classic' | 'triangle' | 'chevron'
+  // Theme-matched (Pro)
+  | 'dark' | 'light' | 'cyberpunk' | 'retro' | 'ocean' | 'sunset' | 'forest'
+  // Creative/Fun (Pro)
+  | 'lizard' | 'frog' | 'rocket' | 'lightning' | 'flame'
 
 export interface WheelEntry {
   id: string
