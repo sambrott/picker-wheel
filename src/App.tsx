@@ -52,39 +52,33 @@ function App() {
         <AdPlaceholder size="leaderboard" position="header" />
       </div>
       
-      <div className="content-wrapper">
-        {/* Left Ad Column */}
-        <aside className="ad-column ad-left">
-          <AdPlaceholder size="rectangle" position="sidebar" />
-        </aside>
-        
-        {/* Main Content */}
-        <main className="main-content">
-          <div className="wheel-section">
+      <div className="two-column-layout">
+        {/* Left Column - Fixed Wheel */}
+        <div className="left-column">
+          <div className="wheel-sticky">
             <WheelCanvas onSpinComplete={handleSpinComplete} />
+            {/* Ad below wheel */}
+            <div className="wheel-ad">
+              <AdPlaceholder size="rectangle" position="sidebar" />
+            </div>
           </div>
-          <aside className="input-section">
+        </div>
+        
+        {/* Right Column - Scrollable Content */}
+        <div className="right-column">
+          <div className="panels-container">
             <InputPanel />
             <PresetWheels />
             <ThemePicker />
+            <ToolSettings />
             <AccumulationResults />
-          </aside>
-        </main>
-        
-        {/* Right Ad Column */}
-        <aside className="ad-column ad-right">
-          <AdPlaceholder size="rectangle" position="sidebar" />
-        </aside>
-      </div>
-      
-      {/* Ad Row Between Content and Settings */}
-      <div className="ad-row ad-middle">
-        <AdPlaceholder size="leaderboard" position="footer" />
-      </div>
-      
-      {/* Tool Settings - Separate Section */}
-      <div className="settings-wrapper">
-        <ToolSettings />
+            
+            {/* Ad within content */}
+            <div className="content-ad">
+              <AdPlaceholder size="rectangle" position="content" />
+            </div>
+          </div>
+        </div>
       </div>
       
       <Footer />

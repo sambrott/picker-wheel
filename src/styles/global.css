@@ -31,8 +31,12 @@
   --shadow-inset-deep: inset 0 3px 6px rgba(0, 0, 0, 0.35);
   
   /* Ad Sizes */
-  --ad-column-width: 160px;
+  --ad-column-width: 300px;
   --ad-banner-height: 90px;
+  
+  /* Layout */
+  --left-column-width: 400px;
+  --right-column-width: 380px;
 }
 
 /* Reset */
@@ -83,39 +87,63 @@ body {
   padding-top: var(--spacing-lg);
 }
 
-.ad-row.ad-middle {
-  padding: var(--spacing-xl) var(--spacing-xl);
-}
-
-/* Content Wrapper with Side Ads */
-.content-wrapper {
+/* Two Column Layout */
+.two-column-layout {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-lg);
-  padding: var(--spacing-lg) var(--spacing-md);
-  max-width: 1400px;
+  gap: var(--spacing-2xl);
+  padding: var(--spacing-xl) var(--spacing-xl);
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  flex: 1;
+  min-height: 0; /* Allow flex children to shrink */
 }
 
-/* Side Ad Columns */
-.ad-column {
+/* Left Column - Fixed Wheel */
+.left-column {
   flex-shrink: 0;
-  width: var(--ad-column-width);
+  width: var(--left-column-width);
+  align-self: flex-start;
+  position: sticky;
+  top: var(--spacing-xl);
+}
+
+.wheel-sticky {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: var(--spacing-md);
+  gap: var(--spacing-xl);
 }
 
-/* Main Content Area */
-.main-content {
-  display: grid;
-  grid-template-columns: auto minmax(280px, 320px);
-  gap: var(--spacing-lg);
-  max-width: 750px;
+.wheel-ad {
+  margin-top: var(--spacing-md);
 }
 
+/* Right Column - Scrollable Content */
+.right-column {
+  flex: 1;
+  max-width: var(--right-column-width);
+  min-width: 320px;
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: var(--spacing-sm);
+}
+
+.panels-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.content-ad {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  justify-content: center;
+}
+
+/* Main Content for Fullscreen */
 .main-content.fullscreen-active {
   display: flex;
   align-items: center;
@@ -129,22 +157,6 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: var(--spacing-md);
-}
-
-.input-section {
-  display: flex;
-  flex-direction: column;
-  align-self: start;
-  gap: 0;
-}
-
-/* Settings Wrapper - Separate from main content */
-.settings-wrapper {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-xl) var(--spacing-xl);
-  width: 100%;
 }
 
 /* Typography */
@@ -238,54 +250,49 @@ input:focus, textarea:focus {
   opacity: 1;
 }
 
-/* Responsive - Hide side ads on smaller screens */
-@media (max-width: 1200px) {
-  .ad-column {
-    display: none;
-  }
-  
-  .content-wrapper {
+/* Responsive - Stack columns on smaller screens */
+@media (max-width: 900px) {
+  .two-column-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
     padding: var(--spacing-lg);
   }
-}
-
-@media (max-width: 800px) {
-  .main-content {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-    max-width: 100%;
-  }
   
-  .wheel-section {
-    justify-content: center;
-  }
-  
-  .input-section {
+  .left-column {
     width: 100%;
+    max-width: 400px;
+    position: relative;
+    top: 0;
   }
   
-  .input-panel {
-    max-width: 100% !important;
+  .right-column {
+    width: 100%;
+    max-width: 400px;
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
   }
   
-  .settings-wrapper {
-    padding: 0 var(--spacing-lg) var(--spacing-lg);
-  }
-  
-  .ad-row {
-    padding: var(--spacing-md);
+  .wheel-ad {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .content-wrapper {
+  .two-column-layout {
     padding: var(--spacing-md);
   }
   
-  .settings-wrapper {
-    padding: 0 var(--spacing-md) var(--spacing-md);
+  .left-column,
+  .right-column {
+    max-width: 100%;
   }
   
   h1 { font-size: 1.5rem; }
   h2 { font-size: 1.125rem; }
+  
+  .ad-row {
+    padding: var(--spacing-md);
+  }
 }

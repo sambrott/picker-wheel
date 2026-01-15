@@ -2,28 +2,28 @@
 
 /* ========================================
    THEME 1: DARK (Default - Free)
-   Monochrome black primary, soft white accents
+   Monochrome black primary, soft cream accents
    ======================================== */
 [data-theme="dark"] {
   --color-primary-1: #0D0D0D;
   --color-primary-2: #1A1A1A;
   --color-primary-3: #2D2D2D;
-  --color-accent: #E8E8E8;
-  --color-accent-muted: rgba(232, 232, 232, 0.7);
+  --color-accent: #D4D0C8;
+  --color-accent-muted: rgba(212, 208, 200, 0.7);
   --color-background: #0D0D0D;
   --color-surface: #1A1A1A;
   --color-surface-dark: #0A0A0A;
-  --color-text: #E8E8E8;
+  --color-text: #D4D0C8;
   --color-text-dark: #0D0D0D;
-  --color-text-muted: rgba(232, 232, 232, 0.6);
-  --color-highlight: #E8E8E8;
+  --color-text-muted: rgba(212, 208, 200, 0.6);
+  --color-highlight: #D4D0C8;
   --color-danger: #FF4444;
   
   /* Grayscale wheel segment colors (default) */
-  --wheel-seg-1: #E8E8E8;
-  --wheel-seg-2: #D0D0D0;
-  --wheel-seg-3: #B8B8B8;
-  --wheel-seg-4: #A0A0A0;
+  --wheel-seg-1: #D4D0C8;
+  --wheel-seg-2: #C4C0B8;
+  --wheel-seg-3: #B0ACA4;
+  --wheel-seg-4: #9C9890;
   --wheel-seg-5: #808080;
   --wheel-seg-6: #606060;
   --wheel-seg-7: #404040;
@@ -46,19 +46,19 @@
 
 /* ========================================
    THEME 2: LIGHT (Free)
-   Soft off-white primary, dark gray accents
+   Warm off-white primary, dark gray accents
    ======================================== */
 [data-theme="light"] {
-  --color-primary-1: #F5F5F3;
-  --color-primary-2: #EAEAE8;
-  --color-primary-3: #DDDDD8;
+  --color-primary-1: #EAE6DE;
+  --color-primary-2: #E0DCD4;
+  --color-primary-3: #D6D2CA;
   --color-accent: #1A1A1A;
   --color-accent-muted: rgba(26, 26, 26, 0.7);
-  --color-background: #F5F5F3;
-  --color-surface: #EAEAE8;
-  --color-surface-dark: #DDDDD8;
+  --color-background: #EAE6DE;
+  --color-surface: #E0DCD4;
+  --color-surface-dark: #D6D2CA;
   --color-text: #1A1A1A;
-  --color-text-dark: #F5F5F3;
+  --color-text-dark: #EAE6DE;
   --color-text-muted: rgba(26, 26, 26, 0.6);
   --color-highlight: #1A1A1A;
   --color-danger: #D32F2F;
