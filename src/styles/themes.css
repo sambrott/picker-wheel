@@ -2,42 +2,32 @@
 
 /* ========================================
    THEME 1: DARK (Default - Free)
-   Monochrome black primary, white accents
+   Soft dark with purple accent - easy on eyes
    ======================================== */
 [data-theme="dark"] {
-  --color-primary-1: #000000;
-  --color-primary-2: #1A1A1A;
-  --color-primary-3: #2D2D2D;
-  --color-accent: #FFFFFF;
-  --color-accent-muted: rgba(255, 255, 255, 0.7);
-  --color-background: #000000;
-  --color-surface: #1A1A1A;
-  --color-surface-dark: #0A0A0A;
-  --color-text: #FFFFFF;
-  --color-text-dark: #000000;
-  --color-text-muted: rgba(255, 255, 255, 0.6);
-  --color-highlight: #FFFFFF;
-  --color-danger: #FF4444;
+  --color-primary-1: #1E1E2E;
+  --color-primary-2: #2A2A3C;
+  --color-primary-3: #363649;
+  --color-accent: #A78BFA;
+  --color-accent-muted: rgba(167, 139, 250, 0.7);
+  --color-background: #1E1E2E;
+  --color-surface: #2A2A3C;
+  --color-surface-dark: #16161F;
+  --color-text: #E4E4E7;
+  --color-text-dark: #1E1E2E;
+  --color-text-muted: rgba(228, 228, 231, 0.6);
+  --color-highlight: #A78BFA;
+  --color-danger: #F87171;
   
-  /* Grayscale wheel segment colors (default) */
-  --wheel-seg-1: #FFFFFF;
-  --wheel-seg-2: #E0E0E0;
-  --wheel-seg-3: #C0C0C0;
-  --wheel-seg-4: #A0A0A0;
-  --wheel-seg-5: #808080;
-  --wheel-seg-6: #606060;
-  --wheel-seg-7: #404040;
-  --wheel-seg-8: #303030;
-  
-  /* Colorful wheel segment colors (when enabled) */
-  --wheel-color-1: #FF6B6B;
-  --wheel-color-2: #4ECDC4;
-  --wheel-color-3: #FFE66D;
-  --wheel-color-4: #95E1D3;
-  --wheel-color-5: #F38181;
-  --wheel-color-6: #AA96DA;
-  --wheel-color-7: #FCBAD3;
-  --wheel-color-8: #A8D8EA;
+  /* Soft colorful wheel segment colors */
+  --wheel-seg-1: #A78BFA;
+  --wheel-seg-2: #67E8F9;
+  --wheel-seg-3: #FCD34D;
+  --wheel-seg-4: #F87171;
+  --wheel-seg-5: #86EFAC;
+  --wheel-seg-6: #FDA4AF;
+  --wheel-seg-7: #93C5FD;
+  --wheel-seg-8: #FDBA74;
   
   /* No special effects */
   --glow-effect: none;
@@ -46,42 +36,32 @@
 
 /* ========================================
    THEME 2: LIGHT (Free)
-   Monochrome white primary, black accents
+   Soft light with purple accent - easy on eyes
    ======================================== */
 [data-theme="light"] {
-  --color-primary-1: #FFFFFF;
-  --color-primary-2: #F5F5F5;
-  --color-primary-3: #E8E8E8;
-  --color-accent: #000000;
-  --color-accent-muted: rgba(0, 0, 0, 0.7);
-  --color-background: #FFFFFF;
-  --color-surface: #F5F5F5;
-  --color-surface-dark: #EBEBEB;
-  --color-text: #000000;
-  --color-text-dark: #FFFFFF;
-  --color-text-muted: rgba(0, 0, 0, 0.6);
-  --color-highlight: #000000;
-  --color-danger: #D32F2F;
+  --color-primary-1: #FAFAFA;
+  --color-primary-2: #F4F4F5;
+  --color-primary-3: #E4E4E7;
+  --color-accent: #7C3AED;
+  --color-accent-muted: rgba(124, 58, 237, 0.7);
+  --color-background: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-surface-dark: #F4F4F5;
+  --color-text: #27272A;
+  --color-text-dark: #FAFAFA;
+  --color-text-muted: rgba(39, 39, 42, 0.6);
+  --color-highlight: #7C3AED;
+  --color-danger: #DC2626;
   
-  /* Grayscale wheel segment colors (default) */
-  --wheel-seg-1: #1A1A1A;
-  --wheel-seg-2: #333333;
-  --wheel-seg-3: #4D4D4D;
-  --wheel-seg-4: #666666;
-  --wheel-seg-5: #808080;
-  --wheel-seg-6: #999999;
-  --wheel-seg-7: #B3B3B3;
-  --wheel-seg-8: #CCCCCC;
-  
-  /* Colorful wheel segment colors (when enabled) */
-  --wheel-color-1: #E53935;
-  --wheel-color-2: #1E88E5;
-  --wheel-color-3: #43A047;
-  --wheel-color-4: #FB8C00;
-  --wheel-color-5: #8E24AA;
-  --wheel-color-6: #00ACC1;
-  --wheel-color-7: #FFB300;
-  --wheel-color-8: #D81B60;
+  /* Soft colorful wheel segment colors */
+  --wheel-seg-1: #8B5CF6;
+  --wheel-seg-2: #06B6D4;
+  --wheel-seg-3: #F59E0B;
+  --wheel-seg-4: #EF4444;
+  --wheel-seg-5: #22C55E;
+  --wheel-seg-6: #EC4899;
+  --wheel-seg-7: #3B82F6;
+  --wheel-seg-8: #F97316;
   
   /* No special effects */
   --glow-effect: none;
@@ -107,25 +87,15 @@
   --color-highlight: #00ffff;
   --color-danger: #ff0055;
   
-  /* Grayscale wheel segment colors */
-  --wheel-seg-1: #E0E0E0;
-  --wheel-seg-2: #C0C0C0;
-  --wheel-seg-3: #A0A0A0;
-  --wheel-seg-4: #808080;
-  --wheel-seg-5: #606060;
-  --wheel-seg-6: #505050;
-  --wheel-seg-7: #404040;
-  --wheel-seg-8: #303030;
-  
-  /* Colorful wheel segment colors - neon palette */
-  --wheel-color-1: #00ffff;
-  --wheel-color-2: #ff00ff;
-  --wheel-color-3: #00ff00;
-  --wheel-color-4: #ff0055;
-  --wheel-color-5: #ffff00;
-  --wheel-color-6: #ff6600;
-  --wheel-color-7: #9900ff;
-  --wheel-color-8: #00aaff;
+  /* Wheel segment colors - neon palette */
+  --wheel-seg-1: #00ffff;
+  --wheel-seg-2: #ff00ff;
+  --wheel-seg-3: #00ff00;
+  --wheel-seg-4: #ff0055;
+  --wheel-seg-5: #ffff00;
+  --wheel-seg-6: #ff6600;
+  --wheel-seg-7: #9900ff;
+  --wheel-seg-8: #00aaff;
   
   /* Neon glow effects */
   --glow-effect: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor;
@@ -163,12 +133,14 @@
   box-shadow: 
     0 0 10px rgba(255, 0, 255, 0.2),
     0 0 20px rgba(255, 0, 255, 0.1);
+  border: 1px solid rgba(255, 0, 255, 0.3);
 }
 
 [data-theme="cyberpunk"] .tool-settings {
   box-shadow: 
     0 0 10px rgba(0, 255, 255, 0.2),
     0 0 20px rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
 }
 
 [data-theme="cyberpunk"] .btn-primary {
@@ -198,10 +170,11 @@
   filter: drop-shadow(0 0 8px rgba(255, 0, 255, 0.6));
 }
 
-[data-theme="cyberpunk"] .modal-content {
+[data-theme="cyberpunk"] .result-modal-content {
   box-shadow: 
     0 0 30px rgba(0, 255, 255, 0.4),
     0 0 60px rgba(255, 0, 255, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.5);
 }
 
 /* ========================================
@@ -223,25 +196,15 @@
   --color-highlight: #F5D547;
   --color-danger: #C44536;
   
-  /* Grayscale wheel segment colors */
-  --wheel-seg-1: #F5E6D3;
-  --wheel-seg-2: #D4C4B0;
-  --wheel-seg-3: #B3A28E;
-  --wheel-seg-4: #92816C;
-  --wheel-seg-5: #71604A;
-  --wheel-seg-6: #5A4D3C;
-  --wheel-seg-7: #433A2E;
-  --wheel-seg-8: #2C2720;
-  
-  /* Colorful wheel segment colors */
-  --wheel-color-1: #E07B39;
-  --wheel-color-2: #4CA64C;
-  --wheel-color-3: #E8C547;
-  --wheel-color-4: #C44536;
-  --wheel-color-5: #8B6914;
-  --wheel-color-6: #5DBB5D;
-  --wheel-color-7: #D4A84B;
-  --wheel-color-8: #E89B5C;
+  /* Wheel segment colors */
+  --wheel-seg-1: #E07B39;
+  --wheel-seg-2: #4CA64C;
+  --wheel-seg-3: #E8C547;
+  --wheel-seg-4: #C44536;
+  --wheel-seg-5: #8B6914;
+  --wheel-seg-6: #5DBB5D;
+  --wheel-seg-7: #D4A84B;
+  --wheel-seg-8: #E89B5C;
   
   --glow-effect: none;
   --glow-intensity: 0;
@@ -266,25 +229,15 @@
   --color-highlight: #00D4AA;
   --color-danger: #FF6B6B;
   
-  /* Grayscale wheel segment colors */
-  --wheel-seg-1: #D0E8F0;
-  --wheel-seg-2: #A8C8D8;
-  --wheel-seg-3: #80A8C0;
-  --wheel-seg-4: #5888A8;
-  --wheel-seg-5: #406890;
-  --wheel-seg-6: #304878;
-  --wheel-seg-7: #203860;
-  --wheel-seg-8: #102848;
-  
-  /* Colorful wheel segment colors */
-  --wheel-color-1: #00D4AA;
-  --wheel-color-2: #00B4D8;
-  --wheel-color-3: #0096C7;
-  --wheel-color-4: #0077B6;
-  --wheel-color-5: #48CAE4;
-  --wheel-color-6: #90E0EF;
-  --wheel-color-7: #00A896;
-  --wheel-color-8: #02C39A;
+  /* Wheel segment colors */
+  --wheel-seg-1: #00D4AA;
+  --wheel-seg-2: #00B4D8;
+  --wheel-seg-3: #0096C7;
+  --wheel-seg-4: #0077B6;
+  --wheel-seg-5: #48CAE4;
+  --wheel-seg-6: #90E0EF;
+  --wheel-seg-7: #00A896;
+  --wheel-seg-8: #02C39A;
   
   --glow-effect: none;
   --glow-intensity: 0;
@@ -309,25 +262,15 @@
   --color-highlight: #FFB347;
   --color-danger: #FF6B9D;
   
-  /* Grayscale wheel segment colors */
-  --wheel-seg-1: #F0D8E0;
-  --wheel-seg-2: #D0B0C0;
-  --wheel-seg-3: #B088A0;
-  --wheel-seg-4: #906080;
-  --wheel-seg-5: #704060;
-  --wheel-seg-6: #583050;
-  --wheel-seg-7: #402040;
-  --wheel-seg-8: #281030;
-  
-  /* Colorful wheel segment colors */
-  --wheel-color-1: #FF6B6B;
-  --wheel-color-2: #FF8E72;
-  --wheel-color-3: #FFB347;
-  --wheel-color-4: #FFD93D;
-  --wheel-color-5: #C44569;
-  --wheel-color-6: #F78FB3;
-  --wheel-color-7: #FF9A8B;
-  --wheel-color-8: #FECDA6;
+  /* Wheel segment colors */
+  --wheel-seg-1: #FF6B6B;
+  --wheel-seg-2: #FF8E72;
+  --wheel-seg-3: #FFB347;
+  --wheel-seg-4: #FFD93D;
+  --wheel-seg-5: #C44569;
+  --wheel-seg-6: #F78FB3;
+  --wheel-seg-7: #FF9A8B;
+  --wheel-seg-8: #FECDA6;
   
   --glow-effect: none;
   --glow-intensity: 0;
@@ -352,25 +295,15 @@
   --color-highlight: #C4A35A;
   --color-danger: #D35400;
   
-  /* Grayscale wheel segment colors */
-  --wheel-seg-1: #D8E0D0;
-  --wheel-seg-2: #B8C8A8;
-  --wheel-seg-3: #98B080;
-  --wheel-seg-4: #789858;
-  --wheel-seg-5: #588040;
-  --wheel-seg-6: #406830;
-  --wheel-seg-7: #305020;
-  --wheel-seg-8: #203810;
-  
-  /* Colorful wheel segment colors */
-  --wheel-color-1: #8FBC8F;
-  --wheel-color-2: #6B8E23;
-  --wheel-color-3: #C4A35A;
-  --wheel-color-4: #8B7355;
-  --wheel-color-5: #556B2F;
-  --wheel-color-6: #9ACD32;
-  --wheel-color-7: #BDB76B;
-  --wheel-color-8: #6B8E23;
+  /* Wheel segment colors */
+  --wheel-seg-1: #8FBC8F;
+  --wheel-seg-2: #6B8E23;
+  --wheel-seg-3: #C4A35A;
+  --wheel-seg-4: #8B7355;
+  --wheel-seg-5: #556B2F;
+  --wheel-seg-6: #9ACD32;
+  --wheel-seg-7: #BDB76B;
+  --wheel-seg-8: #6B8E23;
   
   --glow-effect: none;
   --glow-intensity: 0;
